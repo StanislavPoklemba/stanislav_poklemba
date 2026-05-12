@@ -115,12 +115,12 @@ const techIcons = [
   { Icon: SiNextdotjs, label: "Next.js", color: "#000000" },
   { Icon: SiPython, label: "Python", color: "#3776AB" },
   { Icon: SiGraphql, label: "GraphQL", color: "#E10098" },
-  { Icon: SiGit, label: "Git", color: "#F05032" },
   { Icon: SiMysql, label: "MySQL", color: "#4479A1" },
+  { Icon: SiGit, label: "Git", color: "#F05032" },
   { Icon: SiAnthropic, label: "Claude", color: "#D97757" },
-  { Icon: SiHtml5, label: "HTML", color: "#E34F26" },
   { Icon: SiCss, label: "CSS", color: "#1572B6" },
   { Icon: SiJavascript, label: "JavaScript", color: "#F7DF1E" },
+  { Icon: SiHtml5, label: "HTML", color: "#E34F26" },
 ];
 
 const block =
