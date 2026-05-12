@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la \"C:/Users/stano/Desktop/stanislav_poklemba/\" && ls \"C:/Users/stano/Downloads/\" 2>&1 | head -100)",
+      "Bash(find \"C:/Users/stano/Desktop/\" -iname \"*cv_photo*\" 2>/dev/null; find \"C:/Users/stano/Downloads/\" -iname \"*cv*\" -type f 2>/dev/null | head -20)",
+      "Bash(cp \"C:/Users/stano/Desktop/dokumenty/plocha/zivotopis/CV_photo.jpg\" \"C:/Users/stano/Desktop/stanislav_poklemba/src/assets/photos/CV_photo.jpg\")",
+      "Bash(cp \"C:/Users/stano/Downloads/WhatsApp Image 2026-05-11 at 22.51.01.jpeg\" \"C:/Users/stano/Desktop/stanislav_poklemba/src/assets/photos/WhatsApp_Image_2026-05-11_at_22_51_01.jpeg\")",
+      "Bash(cp \"C:/Users/stano/Downloads/WhatsApp Image 2026-05-11 at 22.51.00 \\(2\\).jpeg\" \"C:/Users/stano/Desktop/stanislav_poklemba/src/assets/photos/WhatsApp_Image_2026-05-11_at_22_51_00__2_.jpeg\")",
+      "Bash(cp \"C:/Users/stano/Downloads/WhatsApp Image 2026-05-11 at 22.51.01 \\(2\\).jpeg\" \"C:/Users/stano/Desktop/stanislav_poklemba/src/assets/photos/WhatsApp_Image_2026-05-11_at_22_51_01__2_.jpeg\")",
+      "Bash(cp \"C:/Users/stano/Downloads/WhatsApp Image 2026-05-11 at 22.51.01 \\(3\\).jpeg\" \"C:/Users/stano/Desktop/stanislav_poklemba/src/assets/photos/WhatsApp_Image_2026-05-11_at_22_51_01__3_.jpeg\")",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(python3 -c \"import sys,json; p=json.load\\(sys.stdin\\); deps={**p.get\\('dependencies',{}\\), **p.get\\('devDependencies',{}\\)}; [print\\(k,v\\) for k,v in deps.items\\(\\) if any\\(x in k.lower\\(\\) for x in ['react','navigation','apollo','graphql','axios','tamagui','gesture','reanimated','keyboard','i18n','locale','translate','magento']\\)]\")",
+      "Bash(xargs grep -li \"laboratorn\\\\|laboratory\\\\|labTest\\\\|lab_test\\\\|labPdf\\\\|lab.*pdf\\\\|pdf.*lab\")",
+      "Bash(xargs grep -li \"pdf\\\\|PDF\\\\|LabTest\\\\|lab_test\\\\|labtest\")",
+      "Bash(xargs grep -li \"recommend\\\\|bestSell\\\\|recentlyViewed\\\\|recently_viewed\\\\|lastViewed\\\\|searchFallback\\\\|noResults\\\\|no_results\")",
+      "Bash(npx vite *)",
+      "Bash(node -e \"const {execSync}=require\\('child_process'\\); try{execSync\\('node node_modules/vite/bin/vite.js build', {stdio:'pipe', encoding:'utf8'}\\); console.log\\('ok'\\)}catch\\(e\\){console.log\\(e.stdout\\); console.log\\(e.stderr\\)}\")",
+      "Bash(node -e ' *)",
+      "mcp__Claude_in_Chrome__navigate",
+      "mcp__Claude_in_Chrome__read_console_messages",
+      "mcp__Claude_in_Chrome__javascript_tool",
+      "Bash(node --input-type=module)",
+      "Bash(New-Item -ItemType Directory -Path \"C:\\\\Users\\\\stano\\\\Desktop\\\\stanislav_poklemba\\\\public\" -Force)",
+      "Bash(Out-Null)",
+      "Bash(Copy-Item \"C:\\\\Users\\\\stano\\\\Desktop\\\\Stanislav_Poklemba_CV_en.pdf\" \"C:\\\\Users\\\\stano\\\\Desktop\\\\stanislav_poklemba\\\\public\\\\Stanislav_Poklemba_CV_en.pdf\")"
+    ]
+  }
+}

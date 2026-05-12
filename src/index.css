@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-bg text-textmain font-sans antialiased;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+  ::-webkit-scrollbar       { width: 8px; }
+  ::-webkit-scrollbar-track { background: #f3f3f1; }
+  ::-webkit-scrollbar-thumb { background: #c8c8c6; border-radius: 8px; }
+  ::-webkit-scrollbar-thumb:hover { background: #a8a8a6; }
+  ::selection { background: rgba(0,0,0,0.08); color: #111110; }
+}
+
+@layer components {
+  /* Name headline: dark → slate gradient */
+  .gradient-text {
+    background: linear-gradient(160deg, #111110 0%, #64748b 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Dark fixed navbar */
+  .glass-nav {
+    background: rgba(17, 17, 16, 0.94);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Default card */
+  .card-surface {
+    @apply bg-surface border border-border rounded-2xl;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+  .card-surface:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07), 0 2px 6px rgba(0, 0, 0, 0.04);
+  }
+
+  /* Elevated card — inside surfaceAlt sections */
+  .card-elevated {
+    background-color: #ffffff;
+    border: 1px solid #e3e3e1;
+    border-radius: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+  .card-elevated:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07), 0 2px 6px rgba(0, 0, 0, 0.04);
+  }
+
+  /* Thin section divider */
+  .section-divider {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  /* Hide scrollbar for horizontal photo slider */
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
