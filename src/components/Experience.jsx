@@ -248,13 +248,13 @@ export default function Experience() {
 
           <div className="flex flex-col items-center gap-5 flex-1 pt-10 pb-1 px-4">
             {/* Row 1: TypeScript · React Native · GraphQL */}
-            <div className="flex items-end gap-7">
+            <div className="flex items-end gap-14">
               <TechIcon Icon={SiTypescript} label="TypeScript" color="#3178C6" size={42} />
               <TechIcon Icon={SiReact} label="React Native" color="#61DAFB" size={60} large />
               <TechIcon Icon={SiGraphql} label="GraphQL" color="#E10098" size={42} />
             </div>
             {/* Row 2: Next.js · Git */}
-            <div className="flex items-start gap-10">
+            <div className="flex items-start gap-[72px]">
               <TechIcon Icon={SiNextdotjs} label="Next.js" color="#000000" size={39} />
               <TechIcon Icon={SiGit} label="Git" color="#F05032" size={39} />
             </div>
