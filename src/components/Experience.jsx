@@ -129,11 +129,12 @@ export default function Experience() {
 
         {/* ── Block 1: Company overview ── */}
         <motion.div {...fadeUp(0)} className={block}>
-          <div className="flex flex-wrap items-start gap-5 px-7 sm:px-9 py-6">
+          <div className="flex items-start gap-5 px-7 sm:px-9 py-6">
             <div className="w-12 h-12 rounded-xl bg-surfaceMid border border-border grid place-items-center shrink-0"></div>
 
             <div className="flex-1 min-w-0">
-              <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 mb-1.5">
+              <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1.5 mb-1.5">
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
                 <a
                   href="https://gymbeam.sk/"
                   target="_blank"
@@ -149,6 +150,10 @@ export default function Experience() {
                 <span className="text-border">·</span>
                 <span className="font-bold text-textmain">
                   Frontend Developer Intern
+                </span>
+                </div>
+                <span className="px-3 py-1 rounded-full border border-border text-sm font-medium text-textmuted whitespace-nowrap shrink-0">
+                  Internship
                 </span>
               </div>
 
@@ -200,10 +205,6 @@ export default function Experience() {
                 </p>
               </div>
             </div>
-
-            <span className="px-3 py-1 rounded-full border border-border text-sm font-medium text-textmuted whitespace-nowrap self-start">
-              Internship
-            </span>
           </div>
         </motion.div>
 
