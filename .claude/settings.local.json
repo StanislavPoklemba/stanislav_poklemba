@@ -23,7 +23,8 @@
       "Bash(node --input-type=module)",
       "Bash(New-Item -ItemType Directory -Path \"C:\\\\Users\\\\stano\\\\Desktop\\\\stanislav_poklemba\\\\public\" -Force)",
       "Bash(Out-Null)",
-      "Bash(Copy-Item \"C:\\\\Users\\\\stano\\\\Desktop\\\\Stanislav_Poklemba_CV_en.pdf\" \"C:\\\\Users\\\\stano\\\\Desktop\\\\stanislav_poklemba\\\\public\\\\Stanislav_Poklemba_CV_en.pdf\")"
+      "Bash(Copy-Item \"C:\\\\Users\\\\stano\\\\Desktop\\\\Stanislav_Poklemba_CV_en.pdf\" \"C:\\\\Users\\\\stano\\\\Desktop\\\\stanislav_poklemba\\\\public\\\\Stanislav_Poklemba_CV_en.pdf\")",
+      "Bash(node -e \"const { SiAnthropic } = require\\('react-icons/si'\\); console.log\\(SiAnthropic ? 'OK' : 'NOT FOUND'\\)\")"
     ]
   }
 }

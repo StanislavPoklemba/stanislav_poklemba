@@ -11,12 +11,12 @@ import washington     from '../assets/photos/washington.webp'
 import matterhorn     from '../assets/photos/matterhorn.webp'
 
 const photos = [
-  { src: brooklynBridge, caption: 'Brooklyn Bridge, NY',            category: 'Travel'  },
   { src: matterhorn,     caption: 'Matterhorn, Switzerland',        category: 'Travel'  },
   { src: treviFountain,  caption: 'Trevi Fountain, Rome',           category: 'Travel'  },
   { src: marathon,       caption: 'Košice Half Marathon',           category: 'Running' },
-  { src: mosque,         caption: 'Sheikh Zayed Mosque, Abu Dhabi', category: 'Travel'  },
   { src: statueLiberty,  caption: 'Statue of Liberty, NY',          category: 'Travel'  },
+  { src: brooklynBridge, caption: 'Brooklyn Bridge, NY',            category: 'Travel',  objectPosition: 'center top' },
+  { src: mosque,         caption: 'Sheikh Zayed Mosque, Abu Dhabi', category: 'Travel'  },
   { src: dubai,          caption: 'Dubai Desert',                   category: 'Travel'  },
   { src: washington,     caption: 'Washington D.C.',                category: 'Travel'  },
 ]
@@ -128,7 +128,7 @@ export default function Hobbies() {
   const next  = () => setActive(i => (i + 1) % photos.length)
 
   return (
-    <section id="hobbies" className="py-24 sm:py-32 px-5 sm:px-8">
+    <section id="hobbies" className="py-12 sm:py-16 px-5 sm:px-8">
       <div className="max-w-6xl mx-auto">
         <SectionTitle
           eyebrow="Off the Clock"
@@ -185,6 +185,7 @@ export default function Hobbies() {
                   loading={i < 4 ? 'eager' : 'lazy'}
                   decoding="async"
                   className="absolute inset-0 w-full h-full object-cover"
+                  style={{ objectPosition: p.objectPosition || 'center center' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <figcaption className="absolute bottom-0 left-0 right-0 px-3 py-2.5 translate-y-1 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">

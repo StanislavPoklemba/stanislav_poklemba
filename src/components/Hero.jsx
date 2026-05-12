@@ -38,7 +38,7 @@ export default function Hero() {
               src={heroPhoto}
               alt="Stanislav Poklemba"
               className="w-full h-full object-cover"
-              style={{ objectPosition: 'center 15%' }}
+              style={{ objectPosition: 'center 72%' }}
               loading="eager"
               draggable={false}
             />

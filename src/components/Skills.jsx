@@ -59,7 +59,7 @@ function Badge({ skill, delay }) {
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 sm:py-32 px-5 sm:px-8">
+    <section id="skills" className="py-12 sm:py-16 px-5 sm:px-8">
       <div className="max-w-6xl mx-auto">
         <SectionTitle
           eyebrow="My Toolkit"

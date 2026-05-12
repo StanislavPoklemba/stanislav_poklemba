@@ -1,5 +1,18 @@
 import gymbeamLogo from "../assets/photos/gymbeam-logo.png";
 import { useState } from "react";
+import {
+  SiReact,
+  SiTypescript,
+  SiNextdotjs,
+  SiPython,
+  SiGraphql,
+  SiGit,
+  SiMysql,
+  SiAnthropic,
+  SiHtml5,
+  SiCss,
+  SiJavascript,
+} from "react-icons/si";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   FiExternalLink,
@@ -96,6 +109,20 @@ const languages = [
   { name: "German", level: "A2" },
 ];
 
+const techIcons = [
+  { Icon: SiReact, label: "React", color: "#61DAFB" },
+  { Icon: SiTypescript, label: "TypeScript", color: "#3178C6" },
+  { Icon: SiNextdotjs, label: "Next.js", color: "#000000" },
+  { Icon: SiPython, label: "Python", color: "#3776AB" },
+  { Icon: SiGraphql, label: "GraphQL", color: "#E10098" },
+  { Icon: SiGit, label: "Git", color: "#F05032" },
+  { Icon: SiMysql, label: "MySQL", color: "#4479A1" },
+  { Icon: SiAnthropic, label: "Claude", color: "#D97757" },
+  { Icon: SiHtml5, label: "HTML", color: "#E34F26" },
+  { Icon: SiCss, label: "CSS", color: "#1572B6" },
+  { Icon: SiJavascript, label: "JavaScript", color: "#F7DF1E" },
+];
+
 const block =
   "bg-surface rounded-2xl overflow-hidden border border-border shadow-[0_1px_3px_rgba(0,0,0,0.06),0_1px_2px_rgba(0,0,0,0.04)]";
 
@@ -110,7 +137,7 @@ export default function Experience() {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <section id="experience" className="py-24 sm:py-32 px-5 sm:px-8">
+    <section id="experience" className="py-12 sm:py-16 px-5 sm:px-8">
       <div className="max-w-6xl mx-auto space-y-3">
         <SectionTitle
           eyebrow="Work Experience"
@@ -127,30 +154,31 @@ export default function Experience() {
           />
         </div>
 
-        {/* ── Block 1: Company overview ── */}
-        <motion.div {...fadeUp(0)} className={block}>
+        {/* ── Block 1: Company overview + Live card ── */}
+        <div className="grid sm:grid-cols-3 gap-3">
+        <motion.div {...fadeUp(0)} className={`${block} sm:col-span-2`}>
           <div className="flex items-start gap-5 px-7 sm:px-9 py-6">
             <div className="w-12 h-12 rounded-xl bg-surfaceMid border border-border grid place-items-center shrink-0"></div>
 
             <div className="flex-1 min-w-0">
               <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1.5 mb-1.5">
                 <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
-                <a
-                  href="https://gymbeam.sk/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-semibold text-textmain hover:text-accent2 transition-colors inline-flex items-center gap-1.5 group"
-                >
-                  GymBeam, s.r.o.
-                  <FiExternalLink
-                    size={11}
-                    className="opacity-30 group-hover:opacity-70 transition-opacity"
-                  />
-                </a>
-                <span className="text-border">·</span>
-                <span className="font-bold text-textmain">
-                  Frontend Developer Intern
-                </span>
+                  <a
+                    href="https://gymbeam.sk/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-textmain hover:text-accent2 transition-colors inline-flex items-center gap-1.5 group"
+                  >
+                    GymBeam, s.r.o.
+                    <FiExternalLink
+                      size={11}
+                      className="opacity-30 group-hover:opacity-70 transition-opacity"
+                    />
+                  </a>
+                  <span className="text-border">·</span>
+                  <span className="font-bold text-textmain">
+                    Frontend Developer Intern
+                  </span>
                 </div>
                 <span className="px-3 py-1 rounded-full border border-border text-sm font-medium text-textmuted whitespace-nowrap shrink-0">
                   Internship
@@ -207,6 +235,32 @@ export default function Experience() {
             </div>
           </div>
         </motion.div>
+
+        {/* Tech Highlight card */}
+        <motion.div
+          {...fadeUp(0.1)}
+          className={`${block} flex flex-col justify-between p-6 gap-4`}
+          style={{ background: "linear-gradient(145deg, #eef6ff 0%, #f0f4ff 50%, #faf5ff 100%)" }}
+        >
+          <p className="text-xs font-bold tracking-[0.18em] uppercase text-textmuted">
+            Most used at GymBeam
+          </p>
+
+          <div className="flex flex-col items-center gap-5 flex-1 pt-10 pb-1 px-4">
+            {/* Row 1: TypeScript · React Native · GraphQL */}
+            <div className="flex items-end gap-7">
+              <TechIcon Icon={SiTypescript} label="TypeScript" color="#3178C6" size={42} />
+              <TechIcon Icon={SiReact} label="React Native" color="#61DAFB" size={60} large />
+              <TechIcon Icon={SiGraphql} label="GraphQL" color="#E10098" size={42} />
+            </div>
+            {/* Row 2: Next.js · Git */}
+            <div className="flex items-start gap-10">
+              <TechIcon Icon={SiNextdotjs} label="Next.js" color="#000000" size={39} />
+              <TechIcon Icon={SiGit} label="Git" color="#F05032" size={39} />
+            </div>
+          </div>
+        </motion.div>
+        </div>
 
         {/* ── Block 2: Contributions ── */}
         <motion.div {...fadeUp(0.08)} className={block}>
@@ -275,73 +329,76 @@ export default function Experience() {
           </button>
         </motion.div>
 
-        {/* ── Block 3: Stack · Languages · Cert ── */}
-        <div className="grid sm:grid-cols-3 gap-3">
-          <motion.div
-            {...fadeUp(0.16)}
-            className={`${block} sm:col-span-2 px-7 sm:px-8 py-6`}
-          >
-            <p className="text-sm font-bold tracking-[0.18em] uppercase text-textmain mb-6">
-              Stack
+        {/* ── Block 3: Skills ── */}
+        <motion.div {...fadeUp(0.16)} className={`${block} px-7 sm:px-9 py-6`}>
+          <p className="text-sm font-bold tracking-[0.18em] uppercase text-textmain mb-6">
+            Skills
+          </p>
+          <div className="grid grid-cols-4 sm:grid-cols-6 gap-x-4 gap-y-6">
+            {techIcons.map(({ Icon, label, color }) => (
+              <div key={label} className="flex flex-col items-center gap-2">
+                <Icon size={32} style={{ color }} />
+                <span className="text-[10px] font-medium text-textmuted text-center leading-tight">
+                  {label}
+                </span>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* ── Block 4: Languages · Cert ── */}
+        <div className="grid sm:grid-cols-2 gap-3">
+          <motion.div {...fadeUp(0.28)} className={`${block} px-6 py-5`}>
+            <p className="text-sm font-bold tracking-[0.18em] uppercase text-textmain mb-4">
+              Languages
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-5">
-              {stackGroups.map((g) => (
-                <div key={g.label} className={g.full ? "col-span-2" : ""}>
-                  <p className="text-xs font-semibold tracking-[0.15em] uppercase text-accent2 mb-1.5">
-                    {g.label}
-                  </p>
-                  <p className="text-base text-textmain leading-relaxed">
-                    {g.items.join(" · ")}
-                  </p>
+            <div className="space-y-3">
+              {languages.map((l) => (
+                <div key={l.name} className="flex items-center justify-between">
+                  <span className="text-base text-textmain">{l.name}</span>
+                  <span className="text-sm text-textmuted">{l.level}</span>
                 </div>
               ))}
             </div>
           </motion.div>
 
-          <div className="flex flex-col gap-3">
-            <motion.div
-              {...fadeUp(0.22)}
-              className={`${block} px-6 py-5 flex-1`}
-            >
-              <p className="text-sm font-bold tracking-[0.18em] uppercase text-textmain mb-4">
-                Languages
-              </p>
-              <div className="space-y-3">
-                {languages.map((l) => (
-                  <div
-                    key={l.name}
-                    className="flex items-center justify-between"
-                  >
-                    <span className="text-base text-textmain">{l.name}</span>
-                    <span className="text-sm text-textmuted">{l.level}</span>
-                  </div>
-                ))}
+          <motion.div {...fadeUp(0.34)} className={`${block} px-6 py-5`}>
+            <p className="text-sm font-bold tracking-[0.18em] uppercase text-textmain mb-3">
+              Certification
+            </p>
+            <div className="flex items-start gap-3">
+              <FaNetworkWired
+                size={15}
+                className="text-textmuted mt-0.5 shrink-0"
+              />
+              <div>
+                <p className="text-base font-semibold text-textmain leading-snug">
+                  Cisco CCNP Enterprise
+                </p>
+                <p className="text-sm text-textmuted mt-0.5">
+                  Advanced Routing
+                </p>
               </div>
-            </motion.div>
-
-            <motion.div {...fadeUp(0.28)} className={`${block} px-6 py-5`}>
-              <p className="text-sm font-bold tracking-[0.18em] uppercase text-textmain mb-3">
-                Certification
-              </p>
-              <div className="flex items-start gap-3">
-                <FaNetworkWired
-                  size={15}
-                  className="text-textmuted mt-0.5 shrink-0"
-                />
-                <div>
-                  <p className="text-base font-semibold text-textmain leading-snug">
-                    Cisco CCNP Enterprise
-                  </p>
-                  <p className="text-sm text-textmuted mt-0.5">
-                    Advanced Routing
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
+  );
+}
+
+function TechIcon({ Icon, label, color, size = 28, large = false }) {
+  return (
+    <div className="flex flex-col items-center gap-1.5">
+      <div
+        className={`${large ? "w-24 h-24" : "w-16 h-16"} rounded-2xl bg-white shadow-sm border border-black/5 grid place-items-center`}
+      >
+        <Icon size={size} style={{ color }} />
+      </div>
+      <span className="text-[10px] font-semibold text-textmuted text-center leading-tight">
+        {label}
+      </span>
+    </div>
   );
 }
 

@@ -1,22 +1,27 @@
 import { motion } from 'framer-motion'
-import { FiMail, FiLinkedin, FiGithub } from 'react-icons/fi'
+import { FiMail } from 'react-icons/fi'
+import { SiGmail, SiGithub } from 'react-icons/si'
+import { FaLinkedin } from 'react-icons/fa'
 import { SectionTitle } from './About.jsx'
 
 const links = [
   {
-    icon: FiMail,
+    icon: SiGmail,
+    color: '#EA4335',
     label: 'Email',
     value: 'stanopoklemba@gmail.com',
     href: 'mailto:stanopoklemba@gmail.com',
   },
   {
-    icon: FiLinkedin,
+    icon: FaLinkedin,
+    color: '#0A66C2',
     label: 'LinkedIn',
     value: 'in/stanislav-poklemba',
     href: 'https://www.linkedin.com/in/stanislav-poklemba/',
   },
   {
-    icon: FiGithub,
+    icon: SiGithub,
+    color: '#181717',
     label: 'GitHub',
     value: 'StanislavPoklemba',
     href: 'https://github.com/StanislavPoklemba',
@@ -25,7 +30,7 @@ const links = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 sm:py-32 px-5 sm:px-8">
+    <section id="contact" className="py-12 sm:py-16 px-5 sm:px-8">
       <div className="max-w-4xl mx-auto text-center">
         <SectionTitle eyebrow="Let's Connect" title="Get In Touch" />
 
@@ -58,7 +63,7 @@ export default function Contact() {
                 className="group card-surface border-borderLight p-7 flex flex-col items-center gap-3 hover:border-black/20 transition-all duration-200"
               >
                 <div className="grid place-items-center w-12 h-12 rounded-xl border border-borderLight bg-surfaceMid group-hover:border-black/20 group-hover:bg-surface transition-all">
-                  <Icon size={22} className="text-textmuted group-hover:text-textmain transition-colors" />
+                  <Icon size={22} style={{ color: l.color }} />
                 </div>
                 <div className="text-xs font-semibold tracking-widest uppercase text-textmuted">
                   {l.label}
