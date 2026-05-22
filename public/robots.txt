@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://stanislav-poklemba.vercel.app/sitemap.xml
