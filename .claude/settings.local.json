@@ -24,7 +24,13 @@
       "Bash(New-Item -ItemType Directory -Path \"C:\\\\Users\\\\stano\\\\Desktop\\\\stanislav_poklemba\\\\public\" -Force)",
       "Bash(Out-Null)",
       "Bash(Copy-Item \"C:\\\\Users\\\\stano\\\\Desktop\\\\Stanislav_Poklemba_CV_en.pdf\" \"C:\\\\Users\\\\stano\\\\Desktop\\\\stanislav_poklemba\\\\public\\\\Stanislav_Poklemba_CV_en.pdf\")",
-      "Bash(node -e \"const { SiAnthropic } = require\\('react-icons/si'\\); console.log\\(SiAnthropic ? 'OK' : 'NOT FOUND'\\)\")"
+      "Bash(node -e \"const { SiAnthropic } = require\\('react-icons/si'\\); console.log\\(SiAnthropic ? 'OK' : 'NOT FOUND'\\)\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(git commit *)",
+      "Bash(Remove-Item \"C:\\\\Users\\\\stano\\\\Desktop\\\\weby\\\\stanislav_poklemba\\\\src\\\\components\\\\PasswordGate.jsx\")",
+      "Bash(Remove-Item \"C:\\\\Users\\\\stano\\\\Desktop\\\\weby\\\\stanislav_poklemba\\\\src\\\\components\\\\Skills.jsx\")"
     ]
   }
 }
