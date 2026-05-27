@@ -366,18 +366,24 @@ export default function Experience() {
             <p className="text-sm font-bold tracking-[0.18em] uppercase text-textmain mb-3">
               Certification
             </p>
-            <div className="flex items-start gap-3">
-              <FaNetworkWired
-                size={15}
-                className="text-textmuted mt-0.5 shrink-0"
-              />
-              <div>
-                <p className="text-base font-semibold text-textmain leading-snug">
-                  Cisco CCNP Enterprise
-                </p>
-                <p className="text-sm text-textmuted mt-0.5">
-                  Advanced Routing
-                </p>
+            <div className="flex flex-col gap-4">
+              <div className="flex items-start gap-3">
+                <FaNetworkWired size={15} className="text-textmuted mt-0.5 shrink-0" />
+                <div>
+                  <p className="text-base font-semibold text-textmain leading-snug">
+                    Cisco CCNP Enterprise
+                  </p>
+                  <p className="text-sm text-textmuted mt-0.5">Advanced Routing</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <FaNetworkWired size={15} className="text-textmuted mt-0.5 shrink-0" />
+                <div>
+                  <p className="text-base font-semibold text-textmain leading-snug">
+                    CCNP Enterprise: Core Networking
+                  </p>
+                  <p className="text-sm text-textmuted mt-0.5">Cisco Networking Academy · CNL Academy</p>
+                </div>
               </div>
             </div>
           </motion.div>
