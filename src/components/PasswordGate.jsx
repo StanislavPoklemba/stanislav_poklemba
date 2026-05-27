@@ -2,13 +2,21 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import heroPhoto from '../assets/photos/CV_photo.webp'
 
+const HASH = '0b4e0209614cddfc0064a3037ba2d3f0f2d8f00751140e0c47ffcec1b6bd5fa5'
+
+async function sha256(str) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str))
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('')
+}
+
 export default function PasswordGate({ onUnlock }) {
   const [password, setPassword] = useState('')
   const [error, setError] = useState(false)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    if (password === 'stano') {
+    const hashed = await sha256(password)
+    if (hashed === HASH) {
       localStorage.setItem('sp_unlocked', '1')
       onUnlock()
     } else {
