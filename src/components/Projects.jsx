@@ -5,19 +5,19 @@ import { SectionTitle } from './About.jsx'
 const projects = [
   {
     name: 'Project Name',
-    description: 'Coming soon — building something cool 🚀',
+    description: 'Coming soon — building something cool',
     tags: ['React', 'CSS', 'REST API'],
     num: '01',
   },
   {
     name: 'Project Name',
-    description: 'Coming soon — building something cool 🚀',
+    description: 'Coming soon — building something cool',
     tags: ['Next.js', 'Tailwind', 'FastAPI'],
     num: '02',
   },
   {
     name: 'Project Name',
-    description: 'Coming soon — building something cool 🚀',
+    description: 'Coming soon — building something cool',
     tags: ['React', 'Framer Motion', 'UI/UX'],
     num: '03',
   },
