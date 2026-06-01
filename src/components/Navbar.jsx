@@ -45,7 +45,7 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className="fixed top-0 inset-x-0 z-50 transition-all duration-300 glass-nav"
     >
-      <nav className="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-end">
+      <nav className="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-center">
         {/* Desktop links */}
         <ul className="hidden md:flex items-center gap-1">
           {links.map((link) => (
