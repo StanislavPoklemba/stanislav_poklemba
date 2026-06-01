@@ -96,14 +96,6 @@ export default function Hero() {
               View My Work
               <FiArrowDown size={15} />
             </button>
-            <a
-              href="/Stanislav_Poklemba_CV_en.pdf"
-              download="Stanislav_Poklemba_CV_en.pdf"
-              className="inline-flex items-center gap-2 px-8 py-3 rounded-full border border-black/15 text-textmain font-semibold text-sm tracking-wide hover:border-black/30 hover:bg-black/[0.04] transition-all"
-            >
-              <FiDownload size={15} />
-              Download CV
-            </a>
           </motion.div>
         </div>
       </div>
