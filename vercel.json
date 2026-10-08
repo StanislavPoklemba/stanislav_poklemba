@@ -1,0 +1,1 @@
+{"rewrites":[{"source":"/baren","destination":"https://baren-n63o.vercel.app/"},{"source":"/baren/:path*","destination":"https://baren-n63o.vercel.app/:path*"},{"source":"/streetfood","destination":"https://street-food-festival-austria.vercel.app/"},{"source":"/streetfood/:path*","destination":"https://street-food-festival-austria.vercel.app/:path*"}]}
