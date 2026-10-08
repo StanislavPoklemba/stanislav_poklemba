@@ -1,25 +1,25 @@
 import { motion } from 'framer-motion'
-import { FiExternalLink, FiGithub } from 'react-icons/fi'
+import { FiExternalLink } from 'react-icons/fi'
 import { SectionTitle } from './About.jsx'
 
 const projects = [
   {
-    name: 'Project Name',
-    description: 'Coming soon — building something cool',
-    tags: ['React', 'CSS', 'REST API'],
+    name: 'European Street Food Festival',
+    description:
+      'Redesign of the festival website: dark night-market look, animated stats and a live-filterable tour schedule.',
+    tags: ['React', 'Vite', 'CSS'],
     num: '01',
+    label: 'Redesign',
+    url: '/streetfood/',
   },
   {
-    name: 'Project Name',
-    description: 'Coming soon — building something cool',
-    tags: ['Next.js', 'Tailwind', 'FastAPI'],
+    name: 'Zum schwarzen Bären',
+    description:
+      'Multilingual website for a boutique hotel and restaurant in Andermatt, with a reservation form and a Node.js backend.',
+    tags: ['React', 'Tailwind', 'Framer Motion', 'Node.js'],
     num: '02',
-  },
-  {
-    name: 'Project Name',
-    description: 'Coming soon — building something cool',
-    tags: ['React', 'Framer Motion', 'UI/UX'],
-    num: '03',
+    label: 'Hotel & Restaurant',
+    url: '/baren/',
   },
 ]
 
@@ -33,7 +33,7 @@ export default function Projects() {
           subtitle="Projects I've built and things I'm working on."
         />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-2 gap-5">
           {projects.map((p, i) => (
             <motion.article
               key={i}
@@ -55,8 +55,8 @@ export default function Projects() {
                   }}
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
-                  <span className="text-6xl font-black text-textmuted/30 select-none leading-none">?</span>
-                  <span className="text-[10px] font-semibold tracking-[0.22em] uppercase text-textmuted/50 select-none">In Progress</span>
+                  <span className="text-6xl font-black text-textmuted/30 select-none leading-none">{p.num}</span>
+                  <span className="text-[10px] font-semibold tracking-[0.22em] uppercase text-textmuted/50 select-none">{p.label}</span>
                 </div>
               </div>
 
@@ -79,16 +79,12 @@ export default function Projects() {
 
                 <div className="mt-6 flex items-center gap-2">
                   <a
-                    href="#"
+                    href={p.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg border border-borderLight text-textmain hover:bg-black/[0.04] transition-colors"
                   >
                     <FiExternalLink size={12} /> Live Demo
-                  </a>
-                  <a
-                    href="#"
-                    className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg border border-border text-textmuted hover:border-borderLight hover:text-textmain transition-colors"
-                  >
-                    <FiGithub size={12} /> GitHub
                   </a>
                 </div>
               </div>
