@@ -8,7 +8,7 @@ const projects = [
     description:
       'Redesign of the festival website: dark night-market look, animated stats and a live-filterable tour schedule.',
     tags: ['React', 'Vite', 'CSS'],
-    label: 'Redesign',
+    label: 'Streetfood',
     url: '/streetfood',
     image: '/images/streetfood.jpg',
   },
