@@ -2,6 +2,7 @@ import { useState, useRef, useEffect, useCallback } from 'react'
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'
 import { SectionTitle } from './About.jsx'
 import marathon       from '../assets/photos/marathon.webp'
+import marathonPeace from '../assets/photos/marathon_peace_2026.jpg'
 import brooklynBridge from '../assets/photos/brooklyn_bridge.webp'
 import mosque         from '../assets/photos/mosque.webp'
 import treviFountain  from '../assets/photos/trevi_fountain.webp'
@@ -13,7 +14,8 @@ import matterhorn     from '../assets/photos/matterhorn.webp'
 const photos = [
   { src: matterhorn,     caption: 'Matterhorn, Switzerland',        category: 'Travel'  },
   { src: treviFountain,  caption: 'Trevi Fountain, Rome',           category: 'Travel'  },
-  { src: marathon,       caption: 'Košice Half Marathon',           category: 'Running' },
+  { src: marathon, caption: 'Košice Peace Half Marathon 2026', captionUrl: 'https://www.kosicemarathon.com/kphm/', category: 'Running' },
+  { src: marathonPeace, caption: 'Košice Peace Marathon 2026', category: 'Running' },
   { src: statueLiberty,  caption: 'Statue of Liberty, NY',          category: 'Travel'  },
   { src: brooklynBridge, caption: 'Brooklyn Bridge, NY',            category: 'Travel',  objectPosition: 'center top' },
   { src: mosque,         caption: 'Sheikh Zayed Mosque, Abu Dhabi', category: 'Travel'  },
@@ -63,7 +65,7 @@ function Lightbox({ photo, onClose, onPrev, onNext }) {
           <p className="text-[10px] font-semibold tracking-[0.18em] uppercase text-white/45 mb-0.5">
             {photo.category}
           </p>
-          <p className="text-sm font-semibold text-white">{photo.caption}</p>
+          <p className="text-sm font-semibold text-white">{photo.captionUrl ? (<a href={photo.captionUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-white/80">{photo.caption}</a>) : photo.caption}</p>
         </div>
       </div>
 
@@ -192,7 +194,7 @@ export default function Hobbies() {
                   <p className="text-[9px] font-semibold tracking-[0.16em] uppercase text-white/50 mb-0.5">
                     {p.category}
                   </p>
-                  <p className="text-xs font-semibold text-white leading-tight">{p.caption}</p>
+                  <p className="text-xs font-semibold text-white leading-tight">{p.captionUrl ? (<a href={p.captionUrl} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="underline underline-offset-2">{p.caption}</a>) : p.caption}</p>
                 </figcaption>
               </figure>
             ))}
