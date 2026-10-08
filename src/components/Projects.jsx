@@ -10,7 +10,7 @@ const projects = [
     tags: ['React', 'Vite', 'CSS'],
     num: '01',
     label: 'Redesign',
-    url: '/streetfood/',
+    url: '/streetfood',
   },
   {
     name: 'Zum schwarzen Bären',
@@ -19,7 +19,7 @@ const projects = [
     tags: ['React', 'Tailwind', 'Framer Motion', 'Node.js'],
     num: '02',
     label: 'Hotel & Restaurant',
-    url: '/baren/',
+    url: '/baren',
   },
 ]
 
