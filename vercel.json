@@ -1,1 +1,15 @@
-{"rewrites":[{"source":"/baren","destination":"https://baren-n63o.vercel.app/"},{"source":"/baren/:path*","destination":"https://baren-n63o.vercel.app/:path*"},{"source":"/streetfood","destination":"https://street-food-festival-austria.vercel.app/"},{"source":"/streetfood/:path*","destination":"https://street-food-festival-austria.vercel.app/:path*"}]}
+{
+  "rewrites": [
+    { "source": "/baren", "destination": "https://baren-n63o.vercel.app/" },
+    { "source": "/baren/:path*", "destination": "https://baren-n63o.vercel.app/:path*" },
+    { "source": "/streetfood", "destination": "https://street-food-festival-austria.vercel.app/" },
+    { "source": "/streetfood/:path*", "destination": "https://street-food-festival-austria.vercel.app/:path*" },
+    { "source": "/gallery/:path*", "destination": "https://street-food-festival-austria.vercel.app/gallery/:path*" },
+    { "source": "/sf_crowd.png", "destination": "https://street-food-festival-austria.vercel.app/sf_crowd.png" },
+    { "source": "/sf_people.jpg", "destination": "https://street-food-festival-austria.vercel.app/sf_people.jpg" },
+    { "source": "/skewers.jpg", "destination": "https://street-food-festival-austria.vercel.app/skewers.jpg" },
+    { "source": "/special_burger_crew.png", "destination": "https://street-food-festival-austria.vercel.app/special_burger_crew.png" },
+    { "source": "/fried_food.png", "destination": "https://street-food-festival-austria.vercel.app/fried_food.png" },
+    { "source": "/wild_style_pommes.png", "destination": "https://street-food-festival-austria.vercel.app/wild_style_pommes.png" }
+  ]
+}
