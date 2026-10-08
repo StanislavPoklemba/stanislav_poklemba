@@ -8,18 +8,18 @@ const projects = [
     description:
       'Redesign of the festival website: dark night-market look, animated stats and a live-filterable tour schedule.',
     tags: ['React', 'Vite', 'CSS'],
-    num: '01',
     label: 'Redesign',
     url: '/streetfood',
+    image: '/images/streetfood.jpg',
   },
   {
     name: 'Zum schwarzen Bären',
     description:
       'Multilingual website for a boutique hotel and restaurant in Andermatt, with a reservation form and a Node.js backend.',
     tags: ['React', 'Tailwind', 'Framer Motion', 'Node.js'],
-    num: '02',
     label: 'Hotel & Restaurant',
     url: '/baren',
+    image: '/images/baren.jpg',
   },
 ]
 
@@ -44,21 +44,24 @@ export default function Projects() {
               whileHover={{ y: -4 }}
               className="group card-surface overflow-hidden hover:border-borderLight transition-all duration-200"
             >
-              {/* Thumbnail placeholder */}
-              <div className="relative aspect-[16/9] bg-surfaceMid border-b border-border overflow-hidden">
-                <div
-                  className="absolute inset-0 opacity-[0.03]"
-                  style={{
-                    backgroundImage:
-                      'repeating-linear-gradient(45deg, #000 0, #000 1px, transparent 0, transparent 50%)',
-                    backgroundSize: '24px 24px',
-                  }}
+              {/* Project preview image */}
+              <a
+                href={p.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={'Open ' + p.name}
+                className="relative block aspect-[16/9] bg-surfaceMid border-b border-border overflow-hidden"
+              >
+                <img
+                  src={p.image}
+                  alt={p.name + ' website preview'}
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
-                  <span className="text-6xl font-black text-textmuted/30 select-none leading-none">{p.num}</span>
-                  <span className="text-[10px] font-semibold tracking-[0.22em] uppercase text-textmuted/50 select-none">{p.label}</span>
-                </div>
-              </div>
+                <span className="absolute left-3 bottom-3 px-2.5 py-1 text-[10px] font-semibold tracking-[0.18em] uppercase rounded-full bg-black/60 text-white">
+                  {p.label}
+                </span>
+              </a>
 
               <div className="p-6">
                 <h3 className="text-base font-bold tracking-tight text-textmain">
