@@ -21,13 +21,6 @@ const photos = [
   { src: washington,     caption: 'Washington D.C.',                category: 'Travel'  },
 ]
 
-const extras = [
-  { label: 'Food & Cuisine', detail: 'Hunting for the best local food on every trip' },
-  { label: 'Hiking',         detail: 'Getting off the beaten path whenever possible' },
-  { label: 'Reading',        detail: 'Self-development and mindset books' },
-  { label: 'Podcasts',       detail: 'Educational content to keep learning daily' },
-]
-
 function Lightbox({ photo, onClose, onPrev, onNext }) {
   useEffect(() => {
     const handler = (e) => {
@@ -197,18 +190,6 @@ export default function Hobbies() {
               </figure>
             ))}
           </div>
-        </div>
-
-        {/* Extras grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 rounded-2xl overflow-hidden shadow-[0_1px_3px_rgba(0,0,0,0.06),0_1px_2px_rgba(0,0,0,0.04)]">
-          {extras.map((item) => (
-            <div key={item.label} className="bg-surface p-5 sm:p-6">
-              <p className="text-xs font-semibold tracking-widest uppercase text-textmuted mb-2">
-                {item.label}
-              </p>
-              <p className="text-sm text-textmain leading-relaxed">{item.detail}</p>
-            </div>
-          ))}
         </div>
       </div>
 
