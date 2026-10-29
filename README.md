@@ -1,4 +1,4 @@
-# Stanislav Poklemba — Portfolio
+# Stanislav Poklemba - Portfolio
 
 Personal portfolio site built with **React + Vite**, **Tailwind CSS**, and **Framer Motion**.
 
