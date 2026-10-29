@@ -1,4 +1,5 @@
 {
+  "redirects": [{ "source": "/szus", "destination": "https://claude.ai/artifact/TUpoGuJ9qwx9cCWyn4yXbS", "permanent": false }],
   "rewrites": [
     { "source": "/baren", "destination": "https://baren-n63o.vercel.app/" },
     { "source": "/baren/:path*", "destination": "https://baren-n63o.vercel.app/:path*" },
