@@ -21,6 +21,15 @@ const projects = [
     url: '/baren',
     image: '/images/baren.jpg',
   },
+  {
+    name: 'SZUŠ Odorín',
+    description:
+      'Website for the private art school in Odorín: music, art, dance and drama departments, news, teachers and a playable virtual piano.',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    label: 'School website',
+    url: '/szus',
+    image: '/images/szus.jpg',
+  },
 ]
 
 export default function Projects() {
@@ -33,7 +42,7 @@ export default function Projects() {
           subtitle="Projects I've built and things I'm working on."
         />
 
-        <div className="grid md:grid-cols-2 gap-5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {projects.map((p, i) => (
             <motion.article
               key={i}
