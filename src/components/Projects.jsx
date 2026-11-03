@@ -25,9 +25,9 @@ const projects = [
     name: 'SZUŠ Odorín',
     description:
       'Website for the private art school in Odorín: music, art, dance and drama departments, news, teachers and a playable virtual piano.',
-    tags: ['HTML', 'CSS', 'JavaScript'],
+    tags: ['Astro', 'CSS', 'JavaScript'],
     label: 'School website',
-    url: '/szus',
+    url: 'https://szusodorin.sk/',
     image: '/images/szus.jpg',
   },
 ]

@@ -1,4 +1,8 @@
 {
+  "redirects": [
+    { "source": "/szus", "destination": "https://szusodorin.sk/", "permanent": true },
+    { "source": "/szus/:path*", "destination": "https://szusodorin.sk/", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/baren", "destination": "https://baren-n63o.vercel.app/" },
     { "source": "/baren/:path*", "destination": "https://baren-n63o.vercel.app/:path*" },
